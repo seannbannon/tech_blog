@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Who do you love?",
+        "body": "I am just curious, who do you love?",
+        "user_id": 1
+    },
+    {
+        "title": "Little Martha",
+        "body": "Good song",
+        "user_id": 2
+    },
+    {
+        "title": "Beach Boys",
+        "body": "Are you picking up good vibrations?",
+        "user_id": 2
+    },
+    {
+        "title": "Secrets",
+        "body": "What's something you've never told anyone?",
+        "user_id": 3
+    }
+]
