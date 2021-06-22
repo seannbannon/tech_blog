@@ -1,7 +1,13 @@
-<article class="post">
-
-    {{#each posts as |post| }}
-        {{> post-info post}}
+<ul style="margin:20px; padding:0">
+    {{#each posts}}
+        <li style="border:solid; border-color:rgb(37, 1, 1); margin:10px; list-style-type:none;">
+            <div style="background-color:rgb(37, 1, 1); color:rgb(219, 221, 219); padding:10px">
+                <a href="post/{{id}}" style="color: rgb(219, 221, 219); font-weight:bold; font-size:large">{{title}}</a>
+                <span class="d-flex justify-content-end"style="font-size:smaller">
+                    Posted By: <a href="user/{{id}}" style="color: rgb(219, 221, 219);">{{user.username}}</a> at {{format_date createdAt}}
+                </span>
+            </div>
+            <p style="color:rgb(37, 1, 1); padding:10px; margin-bottom:0">{{body}}</p>
+        </li>
     {{/each}}
-
-</article>
+</ul>

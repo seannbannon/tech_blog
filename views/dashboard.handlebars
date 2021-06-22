@@ -1,13 +1,26 @@
+<div style="margin:20px; border:solid; border-color:rgb(37, 1, 1);">
+<h1 style="padding:10px; background-color:rgb(37, 1, 1); color:rgb(219, 221, 219)">Your Dashboard</h1>
+<ul style="margin:20px; padding:0">
+
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-    {{#each posts as |post|}}
-      {{> dashboard-postinfo post}}
+    {{#each posts}}
+        <li style="border-radius:10px; border:solid; border-color:rgb(116, 116, 116); margin:10px; list-style-type:none;">
+            <div class="d-flex flex-row justify-content-between" style="background-color:rgb(116, 116, 116); color:rgb(219, 221, 219); padding:10px">
+                <a href="post/{{id}}" style="color: rgb(219, 221, 219); font-weight:bold; font-size:x-large"> {{title}}</a>
+
+                <div class="d-flex flex-column align-items-end">
+                    <a href="/dashboard/edit-post/{{id}}"><button class="btn btn-light" style="margin-right:10px">Edit</button></a>
+                    <span style="font-size:smaller">{{format_date createdAt}}</span>
+                </div>
+            </div>
+        </li>
     {{/each}}
+    {{else}}
+        <h5 style="color:rgb(37, 1, 1);">You do not have any posts.</h5>
+    {{/if}}
+</ul>
+</div>
 
-</section>
-{{/if}}
-
-<button type="submit" class="btn"><a class="link" href="/dashboard/new">+ New Post</a></button>
-
-<script src="/javascript/add-post.js"></script>
+<div class="d-flex justify-content-center">
+    <a href="/dashboard/create/"><button class="btn btn-dark" type="submit" style="margin-bottom: 20px;">+ New Post</button></a>
+</div>

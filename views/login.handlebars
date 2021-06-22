@@ -1,15 +1,21 @@
- <div class="card">
-      <h3 class="card-header">Login</h3>
-      <form id="login-form" class="card-body">
-        <label class="form-label" for="username-login">Username</label>
-        <input  id="username-login" type="text" autofocus="true" class="form-input" />
+<div class="row" style="margin:20px; border:solid; border-color: border-color:rgb(37, 1, 1);">
+  <div class="col-12" style="padding:0">
+    <h2 style="background-color: rgb(37, 1, 1); color:rgb(219, 221, 219); padding:10px ">Login</h2>
 
-        <label class="form-label" for="password-login">Password</label>
-        <input id="password-login" type="password" autofocus="true" class="form-input" />
-
-        <button type="submit" class="btn">Login!</button>
-        <a class="login-link" href="/signup">Sign up instead</a>
-      </form>
-    </div>
-    
-<script src="/javascript/login.js"></script>
+    <form class="form login-form" style="padding:10px; padding-top:0">
+        <div class="form-group">
+        <label for="name-login">Username:</label>
+        <input class="form-input" type="text" id="name-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-dark" type="submit" style="width:100%">Login!</button>
+        <a href="/signup" style="color:rgb(37, 1, 1)">Sign Up Instead</a>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="./js/login.js"></script>

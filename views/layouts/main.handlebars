@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MVC Tech Blog</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/jass.css">
+    
+    <title>Tech-Blog</title>
 </head>
 
-<body>
-  <div class="wrapper">
-      <header class="hero">
-          <div>
-            <nav class"nav">
-                    <a class="link" href="/">Home</a>
-                    <a class="link" href="/dashboard">Dashboard</a>
-                    {{#if loggedIn}}
-                    <a class="link" href="/" id="logout">Logout</a>
-                    {{else}}
-                    <a class="link" href="/login">Login</a>
-                    {{/if}}
-                </nav>          
-          </div>
-
-          <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
-      </header>
-
-    <main>
-      {{{ body }}}
-    </main>
-  </div>
+<body style="background-color: rgb(190, 212, 190);">
+    <div style="background-color: rgb(37, 1, 1); padding:10px; padding-bottom:20px">
+    <nav style="color: rgb(190, 212, 190); margin-bottom:20px">
+        <a href="/" style="color: rgb(190, 212, 190); padding:15px">Home</a>
+        <a href="/dashboard" style="color: rgb(190, 212, 190); padding:15px">Dashboard</a>
+        {{#if loggedIn}}
+            <a href="/logout" style="color: rgb(190, 212, 190); padding:15px" id="logout">Log Out</a>
+        {{else}}
+            <a href="/login" style="color: rgb(190, 212, 190); padding:15px">Login</a>
+        {{/if}}
+    </nav>
+    <h1><span style="background-color: rgb(190, 212, 190); color: rgb(37, 1, 1); border-radius:15px; padding:10px; margin:10px; font-weight: bold">Tech Blog</span></h1>
+    </div>
+    {{{body}}}
 
     {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
+        <script src="/js/logout.js"></script>
     {{/if}}
-
 </body>
-
 </html>

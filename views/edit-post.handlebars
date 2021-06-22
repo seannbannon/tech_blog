@@ -1,15 +1,29 @@
-<div class="card">
-    <h3 class="card-header">Edit Post</h3>
-    <form class="card-body edit-post-form">
-        <label for="post-title" class="form-label">Title</label>
-        <input name="post-title" type="text" value="{{post.title}}" class="form-input" />
-        <label class="form-label" for="content">Content</label>
-        <input name="content" type="text" value="{{post.content}}" class="form-input" />
-        <button type="submit" class="btn">Update Post</button>
-        <button type="button" class="delete-post-btn btn">Delete Post</button>
-    </form>
+<div class="row" style="margin:20px; border:solid; border-color: border-color:rgb(37, 1, 1);">
+    <div class="col-12" style="padding:0">
+        <div class="d-flex justify-content-between" style="background-color: rgb(37, 1, 1);">
+            <h2 style="color:rgb(190, 212, 190); padding:20px;">Edit Your Post</h2>
+            <button class="btn btn-danger del-post-btn" style="margin:15px;" type="submit">Delete Post</button>
+        </div>
+
+        <form class="form login-form" style="padding:10px; padding-top:0">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input class="form-input" type="text" id="title" value="{{post.title}}" />
+            </div>
+            <form class="form" style="padding:10px; padding-top:0">
+                <div class="form-group">
+                    <label for="content">Post Content:</label>
+                    <input class="textarea" type="text" id="content" style="height:150px; width:100%"
+                        value="{{post.body}}" />
+                </div>
+                <p style="color:rgb(37, 1, 1)">Created by you on {{format_date post.createdAt}}</p>
+                <div class="form-group">
+                    <button class="btn btn-dark edit-post-btn" style="width:100%">Edit Post</button>
+                </div>
+            </form>
+    </div>
 </div>
 
 
-<script src="/javascript/edit-post.js"></script>
-<script src="/javascript/delete-post.js"></script>
+<script src="../../js/delete-post.js"></script>
+<script src="../../js/edit-post.js"></script>

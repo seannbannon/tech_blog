@@ -1,32 +1,27 @@
 {
-    "name": "tech-blog",
-    "version": "1.0.0",
-    "description": "tech-blog",
-    "main": "server.js",
-    "scripts": {
-        "test": "jest",
-        "start": "node server.js",
-        "watch": "nodemon server.js",
-        "seed": "node seeds/index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/seannbannon/tech_blog"
-    },
-    "author": "Sean Bannon",
-    "license": "MIT",
     "dependencies": {
-        "bcrypt": "^5.0.0",
-        "connect-session-sequelize": "^6.1.1",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "express-handlebars": "^4.0.4",
-        "express-session": "^1.17.1",
-        "mysql2": "^2.1.0",
-        "sequelize": "^5.21.12"
+      "bcrypt": "^5.0.1",
+      "connect-session-sequelize": "^7.1.1",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-handlebars": "^5.3.2",
+      "express-session": "^1.17.1",
+      "mysql": "^2.18.1",
+      "mysql2": "^2.2.5",
+      "sequelize": "^6.6.2"
     },
-    "devDependencies": {
-        "jest": "^26.4.2",
-        "nodemon": "^2.0.4"
-    }
-}
+    "scripts": {
+      "start": "node server.js",
+      "seed": "node seeds/index.js"
+    },
+    "name": "14-tech-blog",
+    "description": "",
+    "version": "1.0.0",
+    "main": "server.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/seannbannon/tech_blog.git"
+    },
+    "author": "",
+    "license": "ISC"
+  }
